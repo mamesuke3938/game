@@ -1,0 +1,177 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  font-family: sans-serif;
+  text-align: center;
+  color: white;
+
+  background: radial-gradient(
+    circle at top,
+    #343b78,
+    #20264f,
+    #151936
+  );
+}
+
+/* ゲーム画面 */
+.game {
+  width: min(100%, 480px);
+  padding: 32px 28px 26px;
+  background: #292f61;
+  border: 2px solid #5864a8;
+  border-radius: 26px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.32);
+}
+
+/* タイトル */
+.tagline {
+  color: #aebaff;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+h1 {
+  color: white;
+  font-size: 32px;
+}
+
+.description {
+  color: #e1e5ff;
+  font-size: 15px;
+}
+
+/* 丸のデザイン */
+.note {
+  width: 148px;
+  height: 148px;
+  margin: 25px auto;
+  display: grid;
+  place-items: center;
+  border: 5px solid #7079ad;
+  border-radius: 50%;
+  background: #3b4278;
+  color: #c5caff;
+  font-size: 68px;
+}
+
+/* 丸が光ったとき */
+.note.on {
+  background: #ffcf5a;
+  color: #6a3e00;
+  transform: scale(1.08);
+  box-shadow: 0 0 30px #ffcf5a;
+}
+
+/* スコアと時間 */
+.status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.status-box {
+  padding: 12px;
+  background: #202650;
+  border: 1px solid #515b98;
+  border-radius: 15px;
+}
+
+.status-label {
+  display: block;
+  color: #bfc8ff;
+}
+
+.status-box strong {
+  color: white;
+  font-size: 27px;
+}
+
+/* ボタン */
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 12px;
+  width: 100%;
+}
+
+button {
+  min-width: 0;
+  min-height: 56px;
+  padding: 12px 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+/* スタートボタン */
+.start-button {
+  background: #6575f5;
+  box-shadow: 0 5px 0 #4552bf;
+}
+
+/* タップボタン */
+.tap-button {
+  background: #ff8b70;
+  box-shadow: 0 5px 0 #c85c4b;
+  font-size: 21px;
+}
+
+/* 押せないとき */
+button:disabled {
+  opacity: 0.72;
+  cursor: not-allowed;
+}
+
+/* メッセージ */
+.message {
+  margin-top: 23px;
+  color: #ffe58a;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.hint {
+  color: #b7bee9;
+  font-size: 12px;
+}
+
+/* スマートフォン用 */
+@media (max-width: 420px) {
+  body {
+    padding: 14px;
+  }
+
+  .game {
+    padding: 25px 18px;
+  }
+
+  .note {
+    width: 132px;
+    height: 132px;
+  }
+
+  button {
+    min-height: 54px;
+    font-size: 16px;
+  }
+}
+

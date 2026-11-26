@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>かんたんリズムゲーム</title>
+
+  <link rel="stylesheet" href="game.css">
+  <script src="game.js" defer></script>
+</head>
+<body>
+
+  <main class="game">
+    <p class="tagline">かんたん・たのしい</p>
+
+    <h1>♪ リズムゲーム</h1>
+
+    <p class="description">
+      丸が光ったタイミングで「タップ！」を押そう！
+    </p>
+
+    <div id="note" class="note">♪</div>
+
+    <section class="status">
+      <div class="status-box">
+        <span class="status-label">スコア</span>
+        <strong id="score">0</strong>
+      </div>
+
+      <div class="status-box">
+        <span class="status-label">のこり時間</span>
+        <strong>
+          <span id="time">20</span>
+          <small>秒</small>
+        </strong>
+      </div>
+    </section>
+
+    <div class="buttons">
+      <button id="startButton" class="start-button">
+        スタート
+      </button>
+
+      <button id="tapButton" class="tap-button" disabled>
+        タップ！
+      </button>
+    </div>
+
+    <p id="message" class="message">
+      「スタート」を押してね！
+    </p>
+
+    <p class="hint">
+      キーボードのスペースキーでも遊べるよ
+    </p>
+  </main>
+
+</body>
+</html>
+
